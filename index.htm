@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Business Website</title>
+    <meta name="description" content="Professional business services website." />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top left, #4f46e5 0, #1d4ed8 25%, #020617 60%);
+        }
+
+        .glass {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(18px);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-slate-100">
+    <!-- Navbar -->
+    <header class="fixed inset-x-0 top-0 z-40 border-b border-slate-800/60 bg-slate-950/80 backdrop-blur">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 lg:px-6">
+            <div class="flex items-center gap-2">
+                <div
+                    class="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-500 text-xl font-black tracking-tight">
+                    B</div>
+                <div>
+                    <div class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-300">Brightline</div>
+                    <div class="text-xs text-slate-400">Business Consulting</div>
+                </div>
+            </div>
+            <nav class="hidden items-center gap-8 text-sm font-medium text-slate-200 md:flex">
+                <a href="#services" class="hover:text-indigo-300">Services</a>
+                <a href="#about" class="hover:text-indigo-300">About</a>
+                <a href="#process" class="hover:text-indigo-300">Process</a>
+                <a href="#start-investing" class="hover:text-indigo-300">🚀 Start Investing</a>
+                <a href="#testimonials" class="hover:text-indigo-300">Clients</a>
+                <a href="#auth" id="loginNav"
+                    class="rounded-full border border-slate-700 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-slate-100 hover:border-indigo-400 hover:text-indigo-200">Login
+                    / Register</a>
+                <a href="#contact"
+                    class="rounded-full bg-indigo-500 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-indigo-500/30 hover:bg-indigo-400">Let’s
+                    Talk</a>
+            </nav>
+            <button id="mobileToggle"
+                class="inline-flex items-center justify-center rounded-lg p-2 text-slate-200 hover:bg-slate-800 md:hidden"
+                aria-label="Toggle navigation">
+                <span class="i-lucide-menu" aria-hidden="true">☰</span>
+            </button>
+        </div>
+        <nav id="mobileNav"
+            class="glass border-t border-slate-800/70 px-4 pb-4 pt-2 text-sm font-medium text-slate-100 md:hidden hidden">
+            <a href="#services" class="block rounded-md px-2 py-2 hover:bg-slate-800/70">Services</a>
+            <a href="#about" class="block rounded-md px-2 py-2 hover:bg-slate-800/70">About</a>
+            <a href="#process" class="block rounded-md px-2 py-2 hover:bg-slate-800/70">Process</a>
+            <a href="#start-investing" class="block rounded-md px-2 py-2 hover:bg-slate-800/70">🚀 Start Investing</a>
+            <a href="#testimonials" class="block rounded-md px-2 py-2 hover:bg-slate-800/70">Clients</a>
+            <a href="#auth" class="block rounded-md px-2 py-2 hover:bg-slate-800/70">Login / Register</a>
+            <a href="#contact"
+                class="mt-2 block rounded-full bg-indigo-500 px-3 py-2 text-center text-xs font-semibold uppercase tracking-[0.18em] text-white hover:bg-indigo-400">Let’s
+                Talk</a>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero -->
+        <section class="hero-gradient relative overflow-hidden border-b border-slate-800/70">
+            <div class="pointer-events-none absolute inset-0 opacity-40 mix-blend-screen">
+                <div class="absolute -left-10 top-10 h-64 w-64 rounded-full bg-indigo-500/40 blur-3xl"></div>
+                <div class="absolute bottom-0 right-10 h-80 w-80 rounded-full bg-sky-500/30 blur-3xl"></div>
+            </div>
+            <div
+                class="relative mx-auto flex max-w-6xl flex-col gap-12 px-4 py-16 lg:flex-row lg:items-center lg:px-6 lg:py-24">
+                <div class="flex-1 space-y-6">
+                    <p
+                        class="inline-flex items-center gap-2 rounded-full border border-indigo-400/40 bg-indigo-500/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-indigo-200">
+                        Strategic. Measurable. Human.
+                        <span class="h-1 w-1 rounded-full bg-indigo-300"></span>
+                        Business Consulting
+                    </p>
+                    <h1
+                        class="text-balance text-4xl font-semibold tracking-tight text-slate-50 sm:text-5xl lg:text-6xl">
+                        Build a business that is <span class="text-indigo-300">sharp, scalable,</span> and ready for
+                        what’s next.
+                    </h1>
+                    <p class="max-w-xl text-base text-slate-200/80 sm:text-lg">
+                        Student investment learning platform jahan 18+ students (ya parents/guardian ke through) chhote
+                        amount se invest karna seekhen. Student ko safe profit experience mile, aur aapka platform
+                        profit ka hissa handle kare — charity aur taxes ke baad bhi aapka business stable rahe.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-4">
+                        <a href="#earnings"
+                            class="rounded-full bg-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-xl shadow-indigo-500/30 transition hover:bg-indigo-400">Check
+                            how much you can earn</a>
+                        <button id="scrollToServices"
+                            class="flex items-center gap-2 text-sm font-medium text-slate-100 hover:text-indigo-200">
+                            View business model
+                            <span class="text-lg">↓</span>
+                        </button>
+                    </div>
+                    <dl class="mt-6 grid max-w-xl grid-cols-3 gap-4 text-sm text-slate-200/90">
+                        <div>
+                            <dt class="text-xs uppercase tracking-[0.2em] text-slate-400">Years</dt>
+                            <dd class="text-lg font-semibold">10+</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs uppercase tracking-[0.2em] text-slate-400">Projects</dt>
+                            <dd class="text-lg font-semibold">120+</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs uppercase tracking-[0.2em] text-slate-400">Avg. ROI</dt>
+                            <dd class="text-lg font-semibold">3.4x</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="flex-1">
+                    <div
+                        class="glass relative rounded-2xl border border-slate-800/80 p-6 shadow-[0_0_60px_rgba(15,23,42,0.8)]">
+                        <div class="mb-4 flex items-center justify-between text-xs text-slate-400">
+                            <span class="flex items-center gap-2">
+                                <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+                                Snapshot dashboard
+                            </span>
+                            <span>Q4 forecast</span>
+                        </div>
+                        <div class="grid gap-4 sm:grid-cols-3">
+                            <div class="rounded-xl bg-slate-900/60 p-3">
+                                <div class="text-[11px] font-medium uppercase tracking-[0.16em] text-slate-400">Revenue
+                                </div>
+                                <div class="mt-1 text-xl font-semibold text-slate-50">+28%</div>
+                                <div class="text-[11px] text-emerald-400">Ahead of target</div>
+                            </div>
+                            <div class="rounded-xl bg-slate-900/60 p-3">
+                                <div class="text-[11px] font-medium uppercase tracking-[0.16em] text-slate-400">
+                                    Efficiency</div>
+                                <div class="mt-1 text-xl font-semibold text-slate-50">-31%</div>
+                                <div class="text-[11px] text-emerald-300">Ops overhead</div>
+                            </div>
+                            <div class="rounded-xl bg-slate-900/60 p-3">
+                                <div class="text-[11px] font-medium uppercase tracking-[0.16em] text-slate-400">
+                                    Engagement</div>
+                                <div class="mt-1 text-xl font-semibold text-slate-50">+44%</div>
+                                <div class="text-[11px] text-sky-300">Team score</div>
+                            </div>
+                        </div>
+                        <div
+                            class="mt-5 rounded-xl bg-gradient-to-r from-indigo-500/20 via-sky-500/10 to-emerald-500/10 p-4 text-xs text-slate-200">
+                            "In six months we went from reacting to problems to running on a clear, confident plan. Our
+                            leadership meetings are shorter, sharper, and actually drive outcomes."
+                            <div class="mt-3 flex items-center gap-3 text-[11px] text-slate-400">
+                                <div class="h-7 w-7 rounded-full bg-slate-700"></div>
+                                <div>
+                                    <div class="font-medium text-slate-200">COO, SaaS company</div>
+                                    <div>Series B • 80+ employees</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="border-b border-slate-800/70 bg-slate-950">
+            <div class="mx-auto max-w-6xl px-4 py-16 lg:px-6 lg:py-20">
+                <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-[0.25em] text-indigo-300">Services</p>
+                        <h2 class="mt-2 text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">Grow your
+                            business and your profit</h2>
+                        <p class="mt-3 max-w-xl text-sm text-slate-300">
+                            This platform is designed so that users can clearly see their own earning potential, while
+                            the business behind the platform also earns in a fair and transparent way.
+                        </p>
+                    </div>
+                    <p class="max-w-md text-xs text-slate-400">
+                        You decide how much profit you want to target on each transaction. Our built‑in fee and margin
+                        model makes sure your customers, you, and the platform all win.
+                    </p>
+                </div>
+
+                <div class="mt-10 grid gap-6 md:grid-cols-3">
+                    <article
+                        class="group flex flex-col rounded-2xl border border-slate-800 bg-slate-900/40 p-5 shadow-sm transition hover:-translate-y-1 hover:border-indigo-500/60 hover:shadow-[0_18px_45px_rgba(15,23,42,0.8)]">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="text-sm font-semibold text-slate-50">Smart Pricing Engine</h3>
+                            <span
+                                class="rounded-full bg-indigo-500/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.16em] text-indigo-200">Control</span>
+                        </div>
+                        <p class="mt-2 text-sm text-slate-300">
+                            Set your own selling price and desired profit. The system automatically adds a small
+                            platform fee in the background so your customer still feels value, and you still earn.
+                        </p>
+                        <ul class="mt-3 space-y-1.5 text-[13px] text-slate-300">
+                            <li>• Flexible selling price per product or service</li>
+                            <li>• Transparent profit preview for you</li>
+                            <li>• Hidden platform fee logic for our business</li>
+                        </ul>
+                    </article>
+
+                    <article
+                        class="group flex flex-col rounded-2xl border border-slate-800 bg-slate-900/40 p-5 shadow-sm transition hover:-translate-y-1 hover:border-indigo-500/60 hover:shadow-[0_18px_45px_rgba(15,23,42,0.8)]">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="text-sm font-semibold text-slate-50">Profit‑Share Model</h3>
+                            <span
+                                class="rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.16em] text-emerald-200">Win‑win</span>
+                        </div>
+                        <p class="mt-2 text-sm text-slate-300">
+                            The more you earn, the more we earn. A small percentage of your profit goes to the platform,
+                            so incentives stay aligned and we keep improving the system.
+                        </p>
+                        <ul class="mt-3 space-y-1.5 text-[13px] text-slate-300">
+                            <li>• Flat or tiered commission options</li>
+                            <li>• Clear dashboard of your net profit</li>
+                            <li>• Transparent platform revenue share</li>
+                        </ul>
+                    </article>
+
+                    <article
+                        class="group flex flex-col rounded-2xl border border-slate-800 bg-slate-900/40 p-5 shadow-sm transition hover:-translate-y-1 hover:border-indigo-500/60 hover:shadow-[0_18px_45px_rgba(15,23,42,0.8)]">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="text-sm font-semibold text-slate-50">Earning Tools & Reports</h3>
+                            <span
+                                class="rounded-full bg-sky-500/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.16em] text-sky-200">Insight</span>
+                        </div>
+                        <p class="mt-2 text-sm text-slate-300">
+                            See estimated profit per order, per day, and per month. Understand where you are earning
+                            most and how much the platform earns alongside you.
+                        </p>
+                        <ul class="mt-3 space-y-1.5 text-[13px] text-slate-300">
+                            <li>• Live earning calculator</li>
+                            <li>• Simple reports for users and admins</li>
+                            <li>• Export‑ready data for accounting</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Earnings & Profit Calculator -->
+        <section id="earnings" class="border-b border-slate-800/70 bg-slate-950">
+            <div
+                class="mx-auto max-w-6xl px-4 py-16 lg:px-6 lg:py-20 grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+                <div>
+                    <p class="text-xs font-semibold uppercase tracking-[0.25em] text-indigo-300">Earnings</p>
+                    <h2 class="mt-2 text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">Student profit
+                        safe, platform profit stable</h2>
+                    <p class="mt-3 text-sm text-slate-300">
+                        Ye calculator students ke liye design kiya gaya hai. Socho stock example: agar kisi ne ₹1,000
+                        invest kiya aur kuch time baad uska value ₹1,00,000 ho gaya, to total profit ₹99,000 hua.
+                    </p>
+                    <ul class="mt-2 space-y-1 text-xs text-slate-300 list-disc list-inside">
+                        <li>Student / user ka <span class="font-semibold">fixed 80% profit</span> safe rahega (learning
+                            + earning dono).</li>
+                        <li>Baaki <span class="font-semibold">20% profit platform ka</span> hoga — isi me se aapka
+                            business, charity aur tax cover hoga.</li>
+                    </ul>
+                    <p class="mt-2 text-xs text-slate-400">
+                        Idea: Student ko clear lage ke "mera zyadatar profit mera hai", lekin platform ko bhi har profit
+                        me se apna fixed 20% share milta rahe, jisse system long term me secure aur sustainable ban jata
+                        hai.
+                    </p>
+
+                    <form id="profitCalculator" class="mt-6 space-y-4 text-sm">
+                        <div class="grid gap-4 sm:grid-cols-3">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-200" for="baseCost">Product cost
+                                    (₹)</label>
+                                <input id="baseCost" type="number" min="0" value="500"
+                                    class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-500" />
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-slate-200" for="sellPrice">Selling price
+                                    for student (₹)</label>
+                                <input id="sellPrice" type="number" min="0" value="800"
+                                    class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-500" />
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-slate-200" for="platformPercent">Student
+                                    profit (%)</label>
+                                <input id="platformPercent" type="number" min="80" max="80" value="80" readonly
+                                    class="mt-1 w-full cursor-not-allowed rounded-lg border border-slate-700 bg-slate-900/60 px-3 py-2 text-sm text-slate-400 outline-none" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="flex items-center justify-between text-xs font-medium text-slate-200"
+                                for="ordersPerMonth">
+                                <span>Expected orders per month</span>
+                                <span id="ordersPerMonthValue" class="text-indigo-300">50</span>
+                            </label>
+                            <input id="ordersPerMonth" type="range" min="1" max="500" value="50" class="mt-2 w-full" />
+                        </div>
+                    </form>
+                </div>
+
+                <aside class="space-y-4 rounded-2xl border border-slate-800 bg-slate-900/50 p-5 text-sm">
+                    <h3 class="text-sm font-semibold text-slate-50">Result preview</h3>
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <div class="rounded-xl bg-slate-950/60 p-3">
+                            <div class="text-[11px] font-medium uppercase tracking-[0.18em] text-slate-400">Student
+                                profit per order (80%)</div>
+                            <div id="userProfitPerOrder" class="mt-1 text-lg font-semibold text-emerald-300">₹0</div>
+                            <p class="mt-1 text-[11px] text-slate-400">Ye amount student ko milega.</p>
+                        </div>
+                        <div class="rounded-xl bg-slate-950/60 p-3">
+                            <div class="text-[11px] font-medium uppercase tracking-[0.18em] text-slate-400">Platform
+                                profit per order (20%)</div>
+                            <div id="platformProfitPerOrder" class="mt-1 text-lg font-semibold text-indigo-300">₹0</div>
+                            <p class="mt-1 text-[11px] text-slate-400">Isme se business + charity + tax cover hoga.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-xl border border-slate-800 bg-slate-950/60 p-3">
+                        <div class="text-[11px] font-medium uppercase tracking-[0.18em] text-slate-400">Monthly estimate
+                            (based on orders)</div>
+                        <dl class="mt-2 grid grid-cols-2 gap-3 text-xs">
+                            <div>
+                                <dt class="text-slate-400">Student monthly profit (80%)</dt>
+                                <dd id="userMonthlyProfit" class="mt-0.5 text-sm font-semibold text-emerald-300">₹0</dd>
+                            </div>
+                            <div>
+                                <dt class="text-slate-400">Platform monthly profit (20%)</dt>
+                                <dd id="platformMonthlyProfit" class="mt-0.5 text-sm font-semibold text-indigo-300">₹0
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <p class="text-[11px] text-slate-400">
+                        Student ko hamesha apna net profit clear dikhai deta hai. Platform ka 20% share system ke andar
+                        automatic calculate hota hai, jisse business sustainable rahe aur user ko confuse na ho.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Deposit & Withdraw (Demo Wallet) -->
+        <section id="wallet" class="border-b border-slate-800/70 bg-slate-950">
+            <div
+                class="mx-auto max-w-6xl px-4 py-16 lg:px-6 lg:py-20 grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.9fr)]">
+                <div>
+                    <p class="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-300">Wallet</p>
+                    <h2 class="mt-2 text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">Deposit & Withdraw
+                        (Demo)</h2>
+                    <p class="mt-3 text-sm text-slate-300">
+                        Ye section demo hai jisme aap dekh sakte ho ki student wallet kaisa feel hoga: deposit, withdraw
+                        aur platform ka live profit counter. Real money ke liye aapko payment gateway + backend
+                        integrate karna hoga.
+                    </p>
+
+                    <form id="walletForm" class="mt-6 space-y-4 text-sm">
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-200" for="depositAmount">Deposit
+                                    amount (₹)</label>
+                                <input id="depositAmount" type="number" min="0" value="1000"
+                                    class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-500" />
+                            </div>
+                            <div class="flex items-end">
+                                <button type="button" id="depositBtn"
+                                    class="mt-1 inline-flex w-full items-center justify-center rounded-full bg-emerald-500 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-emerald-500/30 hover:bg-emerald-400">
+                                    Deposit
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-200" for="withdrawAmount">Withdraw
+                                    amount (₹)</label>
+                                <input id="withdrawAmount" type="number" min="0" value="500"
+                                    class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-500" />
+                            </div>
+                            <div class="flex items-end">
+                                <button type="button" id="withdrawBtn"
+                                    class="mt-1 inline-flex w-full items-center justify-center rounded-full bg-rose-500 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-rose-500/30 hover:bg-rose-400">
+                                    Withdraw
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="mt-6 grid gap-4 sm:grid-cols-3 text-xs">
+                        <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-3">
+                            <div class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">Wallet
+                                balance</div>
+                            <div id="walletBalance" class="mt-1 text-lg font-semibold text-slate-50">₹0</div>
+                            <p class="mt-1 text-[11px] text-slate-500">Demo only, real payout backend se handle hoga.
+                            </p>
+                        </div>
+                        <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-3">
+                            <div class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">Platform
+                                live profit</div>
+                            <div id="platformLiveProfit" class="mt-1 text-lg font-semibold text-indigo-300">₹0.0</div>
+                            <p class="mt-1 text-[11px] text-slate-500">Auto add: +₹0.5 har 1 minute (demo calculation).
+                            </p>
+                        </div>
+                        <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-3">
+                            <div class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">Total
+                                withdrawals</div>
+                            <div id="totalWithdrawn" class="mt-1 text-lg font-semibold text-emerald-300">₹0</div>
+                            <p class="mt-1 text-[11px] text-slate-500">Students ne ab tak kitna nikal liya (demo).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="space-y-4 rounded-2xl border border-slate-800 bg-slate-900/60 p-5 text-sm">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-sm font-semibold text-slate-50">Recent Withdrawals (Live demo)</h3>
+                        <span class="text-[11px] text-slate-400">Auto scroll</span>
+                    </div>
+                    <div class="relative h-56 overflow-hidden rounded-xl border border-slate-800 bg-slate-950/60">
+                        <ul id="withdrawList" class="withdraw-list divide-y divide-slate-800/80 text-xs">
+                            <!-- JS se dummy withdrawals auto inject honge -->
+                        </ul>
+                        <div
+                            class="pointer-events-none absolute inset-x-0 top-0 h-6 bg-gradient-to-b from-slate-950 via-slate-950/60 to-transparent">
+                        </div>
+                        <div
+                            class="pointer-events-none absolute inset-x-0 bottom-0 h-6 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent">
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-slate-400">
+                        Ye list sirf demo ke liye hai: random naam + amount auto generate hote rahenge, taaki aapko feel
+                        aaye ke live withdrawals ka UI kaisa lagega.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="border-b border-slate-800/70 bg-slate-950">
+            <div
+                class="mx-auto max-w-6xl px-4 py-16 lg:px-6 lg:py-20 grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
+                <div>
+                    <p class="text-xs font-semibold uppercase tracking-[0.25em] text-indigo-300">About</p>
+                    <h2 class="mt-2 text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">A partner who
+                        speaks the language of both strategy and execution.</h2>
+                    <p class="mt-4 text-sm text-slate-300">
+                        Brightline is a boutique consulting studio led by operators, not just advisors. We have built,
+                        scaled, and exited companies across SaaS, professional services, and e‑commerce.
+                    </p>
+                    <p class="mt-3 text-sm text-slate-300">
+                        That lived experience means our recommendations are grounded in reality: what your teams can
+                        execute, what your customers will feel, and what your numbers will show.
+                    </p>
+                    <div class="mt-5 grid gap-4 sm:grid-cols-3">
+                        <div class="rounded-xl border border-slate-800 bg-slate-900/40 p-3">
+                            <div class="text-[11px] font-medium uppercase tracking-[0.18em] text-slate-400">Stage</div>
+                            <div class="mt-1 text-sm font-semibold text-slate-50">Pre‑seed to Series C</div>
+                            <p class="mt-1 text-xs text-slate-400">With a focus on B2B, product‑led, and service‑driven
+                                companies.</p>
+                        </div>
+                        <div class="rounded-xl border border-slate-800 bg-slate-900/40 p-3">
+                            <div class="text-[11px] font-medium uppercase tracking-[0.18em] text-slate-400">Typical
+                                engagement</div>
+                            <div class="mt-1 text-sm font-semibold text-slate-50">8–24 weeks</div>
+                            <p class="mt-1 text-xs text-slate-400">Strategy, implementation, and leadership coaching in
+                                one lane.</p>
+                        </div>
+                        <div class="rounded-xl border border-slate-800 bg-slate-900/40 p-3">
+                            <div class="text-[11px] font-medium uppercase tracking-[0.18em] text-slate-400">
+                                Collaboration</div>
+                            <div class="mt-1 text-sm font-semibold text-slate-50">Embedded partner</div>
+                            <p class="mt-1 text-xs text-slate-400">We work as an extension of your team, not as outside
+                                auditors.</p>
+                        </div>
+                    </div>
+                </div>
+                <aside class="space-y-4 rounded-2xl border border-slate-800 bg-slate-900/40 p-5">
+                    <h3 class="text-sm font-semibold text-slate-50">You might be here because…</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li>• Growth has plateaued even though your team is working harder than ever.</li>
+                        <li>• Leadership meetings feel busy but rarely lead to clear decisions.</li>
+                        <li>• You have data, but not insight — and reporting feels manual and reactive.</li>
+                        <li>• You know what "good" could look like, but lack the bandwidth to design it.</li>
+                    </ul>
+                    <p class="text-xs text-slate-400">
+                        Our job is to create clarity, momentum, and confidence — while leaving you with processes and
+                        tools that keep working long after our engagement ends.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section id="process" class="border-b border-slate-800/70 bg-slate-950">
+            <div class="mx-auto max-w-6xl px-4 py-16 lg:px-6 lg:py-20">
+                <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-[0.25em] text-indigo-300">Process</p>
+                        <h2 class="mt-2 text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">How we work
+                            together</h2>
+                    </div>
+                    <p class="max-w-md text-xs text-slate-400">
+                        A lightweight, transparent process designed to respect your time and get to impact quickly.
+                    </p>
+                </div>
+
+                <ol class="mt-8 grid gap-5 md:grid-cols-4 text-sm">
+                    <li class="relative rounded-2xl border border-slate-800 bg-slate-900/40 p-4">
+                        <div
+                            class="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-indigo-500/90 text-xs font-semibold">
+                            1</div>
+                        <h3 class="text-sm font-semibold text-slate-50">Discovery & audit</h3>
+                        <p class="mt-2 text-xs text-slate-300">We map your current strategy, processes, and metrics to
+                            understand what’s working — and what isn’t.</p>
+                    </li>
+                    <li class="relative rounded-2xl border border-slate-800 bg-slate-900/40 p-4">
+                        <div
+                            class="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-indigo-500/70 text-xs font-semibold">
+                            2</div>
+                        <h3 class="text-sm font-semibold text-slate-50">Design & alignment</h3>
+                        <p class="mt-2 text-xs text-slate-300">We co‑create a clear plan, with stakeholder buy‑in and
+                            defined success metrics.</p>
+                    </li>
+                    <li class="relative rounded-2xl border border-slate-800 bg-slate-900/40 p-4">
+                        <div
+                            class="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-indigo-500/60 text-xs font-semibold">
+                            3</div>
+                        <h3 class="text-sm font-semibold text-slate-50">Execution sprints</h3>
+                        <p class="mt-2 text-xs text-slate-300">We execute alongside your team, removing blockers and
+                            iterating quickly.</p>
+                    </li>
+                    <li class="relative rounded-2xl border border-slate-800 bg-slate-900/40 p-4">
+                        <div
+                            class="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-indigo-500/50 text-xs font-semibold">
+                            4</div>
+                        <h3 class="text-sm font-semibold text-slate-50">Handover & support</h3>
+                        <p class="mt-2 text-xs text-slate-300">We document systems, train owners, and remain available
+                            for follow‑up support.</p>
+                    </li>
+                </ol>
+
+                <!-- Option A: Extra earning with Google Ads -->
+                <div
+                    class="mt-12 grid gap-6 rounded-2xl border border-amber-400/40 bg-amber-500/5 p-5 text-sm text-slate-100 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]">
+                    <div>
+                        <p class="text-[11px] font-semibold uppercase tracking-[0.25em] text-amber-300">Option A · Extra
+                            earning</p>
+                        <h3 class="mt-2 text-base font-semibold text-slate-50">Google Ads se extra income (platform ke
+                            liye)</h3>
+                        <p class="mt-2 text-xs text-slate-200/90">
+                            Student ka main profit to investing / learning se aata hai. Lekin aap apne platform ke liye
+                            extra earning ke liye <span class="font-semibold">Google Ads</span> bhi use kar sakte ho.
+                            Isse:
+                        </p>
+                        <ul class="mt-2 space-y-1 text-xs text-slate-200/90">
+                            <li>• Students ko free ya low‑fee learning content mil sakta hai.</li>
+                            <li>• Aapko har page view / click se ads ke through additional income milti rahegi.</li>
+                            <li>• Platform ka kharcha (server, team, charity, tax) cover karna aur easy ho jata hai.
+                            </li>
+                        </ul>
+                        <p class="mt-2 text-[11px] text-slate-300">
+                            Jab aap ready ho jao, niche diye gaye ad placeholder ke jagah apna original <span
+                                class="font-mono">Google AdSense</span> code paste kar sakte ho.
+                        </p>
+                    </div>
+                    <div class="flex flex-col justify-between gap-3">
+                        <div
+                            class="rounded-xl border border-dashed border-amber-400/60 bg-slate-950/70 p-4 text-center text-[11px] text-amber-200">
+                            <div class="mb-1 font-semibold tracking-[0.18em]">GOOGLE ADS AREA</div>
+                            <p class="text-[11px] text-amber-100/90">
+                                Yahan aap future me Google AdSense ka ad unit code paste kar sakte ho.<br />
+                                For example: top banner / rectangle ad.
+                            </p>
+                        </div>
+                        <p class="text-[11px] text-slate-400">
+                            Note: Google Ads use karte waqt apni <span class="underline decoration-dotted">Adsense
+                                policy</span> aur country ke law (specially students ke liye) ka dhyan zaroor rakhein.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Investing (18+ Only) -->
+        <section id="start-investing" class="border-b border-slate-800/70 bg-slate-950">
+            <div
+                class="mx-auto max-w-6xl px-4 py-16 lg:px-6 lg:py-20 grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+                <div>
+                    <p class="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-300">Start Investing</p>
+                    <h2 class="mt-2 text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">🚀 Start Investing
+                        (18+ Only)</h2>
+                    <p class="mt-3 text-sm text-slate-300">
+                        Ye platform un students aur young earners ke liye hai jo real market ke through investing
+                        seekhna chahte hain, lekin safe structure ke saath. Agar aap 18+ ho, ya 18 se kam ho lekin
+                        parent / guardian ki permission ke saath invest kar rahe ho, to yahan se apni learning journey
+                        start kar sakte ho.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-sm text-slate-300">
+                        <li>• Chhote amount se start karo, step‑by‑step investing samjho.</li>
+                        <li>• Profit hone par student ka hissa clear dikhega, aur platform apna fixed share lega.</li>
+                        <li>• Loss side par aapko conceptually samjhaya jayega, taki risk ko samajh kar sahi decision
+                            lena seekho.</li>
+                    </ul>
+                    <p class="mt-3 text-xs text-slate-400">
+                        Note: Real market me risk hota hai. Ye platform education‑first approach follow karta hai — har
+                        step pe aapko samjhaya jata hai ke risk kya hai, reward kya hai, aur aapko kab invest karna
+                        chahiye ya pause lena chahiye.
+                    </p>
+                    <div class="mt-5 flex flex-wrap gap-3 text-sm">
+                        <a href="#earnings"
+                            class="rounded-full bg-indigo-500 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-indigo-500/30 hover:bg-indigo-400">View
+                            Profit Calculator</a>
+                        <a href="#auth"
+                            class="rounded-full border border-slate-700 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-100 hover:border-emerald-400 hover:text-emerald-200">Login
+                            / Register</a>
+                    </div>
+                </div>
+                <aside class="space-y-4 rounded-2xl border border-slate-800 bg-slate-900/50 p-5 text-sm">
+                    <h3 class="text-sm font-semibold text-slate-50">Quick checklist (Start karne se pehle)</h3>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li>✓ Kya aap 18+ ho? Agar nahi, to kya aapke parent / guardian ko pata hai?</li>
+                        <li>✓ Kya aap samajhte ho ke market me profit ke saath loss bhi ho sakta hai?</li>
+                        <li>✓ Kya aap sirf utna hi amount invest kar rahe ho jo loss hone par bhi aap afford kar sakte
+                            ho?</li>
+                    </ul>
+                    <p class="text-[11px] text-slate-400">
+                        Example: Agar aap ₹1,000 invest karte ho aur future me uska value ₹1,00,000 ho jata hai, to
+                        total profit ₹99,000 hua. Is profit me se student ka major hissa secure rehta hai, aur platform
+                        ka fixed share business, charity aur tax ke liye use hota hai.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="border-b border-slate-800/70 bg-slate-950">
+            <div class="mx-auto max-w-6xl px-4 py-16 lg:px-6 lg:py-20">
+                <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-[0.25em] text-indigo-300">Clients</p>
+                        <h2 class="mt-2 text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">Results from
+                            teams like yours</h2>
+                    </div>
+                    <p class="max-w-md text-xs text-slate-400">
+                        A selection of recent engagements across software, professional services, and e‑commerce.
+                    </p>
+                </div>
+
+                <div class="mt-8 grid gap-6 md:grid-cols-3 text-sm">
+                    <figure class="flex flex-col rounded-2xl border border-slate-800 bg-slate-900/40 p-5">
+                        <figcaption class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">B2B SaaS •
+                            Series B</figcaption>
+                        <p class="mt-3 text-sm text-slate-200">
+                            "We reduced our sales cycle by 22% and increased expansion revenue by 18% within two
+                            quarters. The playbooks they left behind are still in use today."
+                        </p>
+                        <div class="mt-4 text-xs text-slate-400">VP Revenue, Customer analytics platform</div>
+                    </figure>
+
+                    <figure class="flex flex-col rounded-2xl border border-slate-800 bg-slate-900/40 p-5">
+                        <figcaption class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Professional
+                            services • 40+ team</figcaption>
+                        <p class="mt-3 text-sm text-slate-200">
+                            "They helped us standardize how we scope, price, and deliver projects. Utilization is up,
+                            margins are healthier, and our team finally has room to breathe."
+                        </p>
+                        <div class="mt-4 text-xs text-slate-400">Founder, creative studio</div>
+                    </figure>
+
+                    <figure class="flex flex-col rounded-2xl border border-slate-800 bg-slate-900/40 p-5">
+                        <figcaption class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">E‑commerce •
+                            Multi‑brand</figcaption>
+                        <p class="mt-3 text-sm text-slate-200">
+                            "What stood out was their ability to plug into our team and build trust quickly. We now have
+                            a clear operating cadence from weekly check‑ins to quarterly planning."
+                        </p>
+                        <div class="mt-4 text-xs text-slate-400">COO, consumer brand group</div>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Auth (Login/Register) -->
+        <section id="auth" class="border-b border-slate-800/70 bg-slate-950">
+            <div class="mx-auto max-w-3xl px-4 py-16 lg:px-6 lg:py-20">
+                <div class="max-w-xl">
+                    <p class="text-xs font-semibold uppercase tracking-[0.25em] text-indigo-300">Account</p>
+                    <h2 class="mt-2 text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">Login or create
+                        your student account</h2>
+                    <p class="mt-3 text-sm text-slate-300">
+                        Yeh area sirf learning ke liye hai. Abhi <span class="font-semibold text-indigo-200">Premium
+                            Business Courses full</span> ho chuke hain, isliye new login / register temporarily band
+                        hai.
+                    </p>
+                </div>
+                <div class="mt-8 grid gap-8 md:grid-cols-2">
+                    <!-- Login form -->
+                    <form id="loginForm"
+                        class="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/60 p-5 text-sm">
+                        <h3 class="text-sm font-semibold text-slate-50">Login</h3>
+                        <div>
+                            <label for="loginEmail" class="block text-xs font-medium text-slate-200">Email</label>
+                            <input id="loginEmail" type="email"
+                                class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-500" />
+                        </div>
+                        <div>
+                            <label for="loginPassword" class="block text-xs font-medium text-slate-200">Password</label>
+                            <input id="loginPassword" type="password"
+                                class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-500" />
+                        </div>
+                        <button type="submit"
+                            class="mt-1 inline-flex w-full items-center justify-center rounded-full bg-indigo-500 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-indigo-500/30 hover:bg-indigo-400">
+                            Login
+                        </button>
+                        <p class="text-[11px] text-slate-400">Note: Abhi login sirf demo ke liye hai, real account
+                            access temporarily band hai.</p>
+                    </form>
+
+                    <!-- Register form -->
+                    <form id="registerForm"
+                        class="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/60 p-5 text-sm">
+                        <h3 class="text-sm font-semibold text-slate-50">Register</h3>
+                        <div class="grid gap-3 sm:grid-cols-2">
+                            <div>
+                                <label for="regName" class="block text-xs font-medium text-slate-200">Full name</label>
+                                <input id="regName" type="text"
+                                    class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-500" />
+                            </div>
+                            <div>
+                                <label for="regAge" class="block text-xs font-medium text-slate-200">Age</label>
+                                <input id="regAge" type="number" min="10" max="100"
+                                    class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-500" />
+                            </div>
+                        </div>
+                        <div>
+                            <label for="regEmail" class="block text-xs font-medium text-slate-200">Email</label>
+                            <input id="regEmail" type="email"
+                                class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-500" />
+                        </div>
+                        <div>
+                            <label for="regPassword" class="block text-xs font-medium text-slate-200">Password</label>
+                            <input id="regPassword" type="password"
+                                class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-500" />
+                        </div>
+                        <label class="flex items-start gap-2 text-[11px] text-slate-400">
+                            <input id="regGuardian" type="checkbox"
+                                class="mt-0.5 h-3 w-3 rounded border border-slate-600 bg-slate-900 text-indigo-500" />
+                            <span>Mai 18 saal se kam hoon ya student hoon, aur parent / guardian ki permission
+                                hai.</span>
+                        </label>
+                        <button type="submit"
+                            class="mt-1 inline-flex w-full items-center justify-center rounded-full bg-emerald-500 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-emerald-500/20 hover:bg-emerald-400">
+                            Create account
+                        </button>
+                        <p class="text-[11px] text-slate-400">Abhi saare premium slots full hain. Registration form sirf
+                            demo ke liye hai.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="bg-slate-950">
+            <div
+                class="mx-auto max-w-6xl px-4 py-16 lg:px-6 lg:py-20 grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+                <div>
+                    <p class="text-xs font-semibold uppercase tracking-[0.25em] text-indigo-300">Contact</p>
+                    <h2 class="mt-2 text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">Let’s explore your
+                        next quarter, not just your next meeting.</h2>
+                    <p class="mt-3 text-sm text-slate-300">
+                        Share a bit about your company and what you’re working through. We’ll get back within one
+                        business day with a short set of questions or a direct invite to schedule a call.
+                    </p>
+
+                    <dl class="mt-5 grid gap-4 text-sm sm:grid-cols-2">
+                        <div>
+                            <dt class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Email</dt>
+                            <dd class="mt-1 text-sm text-slate-200">Investment.gamil.com</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Based in</dt>
+                            <dd class="mt-1 text-sm text-slate-200"></dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div>
+                    <form id="contactForm"
+                        class="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/50 p-5 text-sm">
+                        <div class="grid gap-3 sm:grid-cols-2">
+                            <div>
+                                <label for="name" class="block text-xs font-medium text-slate-200">Name</label>
+                                <input id="name" name="name" type="text" required
+                                    class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none ring-0 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-500" />
+                            </div>
+                            <div>
+                                <label for="company" class="block text-xs font-medium text-slate-200">Company</label>
+                                <input id="company" name="company" type="text"
+                                    class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none ring-0 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-500" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-xs font-medium text-slate-200">Work email</label>
+                            <input id="email" name="email" type="email" required
+                                class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none ring-0 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-500" />
+                        </div>
+
+                        <div>
+                            <label for="topic" class="block text-xs font-medium text-slate-200">What are you
+                                exploring?</label>
+                            <select id="topic" name="topic"
+                                class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none ring-0 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-500">
+                                <option value="Strategy & positioning">Strategy & positioning</option>
+                                <option value="Operations & process">Operations & process</option>
+                                <option value="Leadership & team">Leadership & team</option>
+                                <option value="Other">Other / not sure yet</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs font-medium text-slate-200">Tell us a bit
+                                more</label>
+                            <textarea id="message" name="message" rows="4"
+                                class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-2 text-sm text-slate-50 outline-none ring-0 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-500"
+                                placeholder="Team size, current challenges, timeline…"></textarea>
+                        </div>
+
+                        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                            <label class="flex items-start gap-2 text-[11px] text-slate-400">
+                                <input id="consent" name="consent" type="checkbox"
+                                    class="mt-0.5 h-3 w-3 rounded border border-slate-600 bg-slate-900 text-indigo-500" />
+                                <span>I agree to be contacted about my inquiry. We’ll never share your details with
+                                    third parties.</span>
+                            </label>
+                            <button type="submit"
+                                class="inline-flex items-center justify-center rounded-full bg-indigo-500 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-indigo-500/30 hover:bg-indigo-400">
+                                Submit inquiry
+                            </button>
+                        </div>
+                        <p id="formMessage" class="hidden text-xs"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/70 bg-slate-950">
+        <div
+            class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-6">
+            <div class="flex items-center gap-2 text-[11px]">
+                <span class="font-semibold text-slate-200">Brightline</span>
+                <span class="h-1 w-1 rounded-full bg-slate-700"></span>
+                <span>Business Consulting</span>
+                <span class="h-1 w-1 rounded-full bg-slate-700"></span>
+                <span>© <span id="year"></span></span>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 text-[11px] text-slate-500">
+                <a href="#services" class="hover:text-indigo-200">Services</a>
+                <a href="#about" class="hover:text-indigo-200">About</a>
+                <a href="#contact" class="hover:text-indigo-200">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login/Register full message modal -->
+    <div id="loginModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/70 px-4">
+        <div class="max-w-sm rounded-2xl border border-slate-800 bg-slate-900 p-5 text-sm shadow-xl">
+            <div class="flex items-start justify-between gap-3">
+                <div>
+                    <h2 class="text-base font-semibold text-slate-50">Premium Business Courses</h2>
+                    <p class="mt-2 text-xs text-slate-300">
+                        Premium Business Courses full ho gaya hai. Kripya next month dobara try karein. Abhi new login /
+                        register nahi ho sakta.
+                    </p>
+                </div>
+                <button id="loginModalClose" class="ml-2 text-slate-400 hover:text-slate-100" aria-label="Close">
+                    ✕
+                </button>
+            </div>
+            <button id="loginModalOk"
+                class="mt-4 w-full rounded-full bg-indigo-500 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white hover:bg-indigo-400">
+                Okay, samajh gaya
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile nav toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        mobileToggle.addEventListener('click', () => {
+            mobileNav.classList.toggle('hidden');
+        });
+
+        // Close mobile nav on link click
+        mobileNav.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll to services button
+        const scrollToServices = document.getElementById('scrollToServices');
+        const servicesSection = document.getElementById('services');
+        scrollToServices.addEventListener('click', () => {
+            servicesSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Contact form handling (front-end only)
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const name = contactForm.name.value.trim();
+            const email = contactForm.email.value.trim();
+            const consent = contactForm.consent.checked;
+
+            if (!name || !email) {
+                showFormMessage('Please fill in your name and email.', false);
+                return;
+            }
+
+            if (!consent) {
+                showFormMessage('Please confirm that we can contact you about your inquiry.', false);
+                return;
+            }
+
+            // Simulate async submission
+            contactForm.querySelector('button[type="submit"]').disabled = true;
+            contactForm.querySelector('button[type="submit"]').textContent = 'Sending…';
+
+            setTimeout(() => {
+                contactForm.reset();
+                showFormMessage('Thank you — your inquiry has been received. We’ll be in touch within one business day.', true);
+                contactForm.querySelector('button[type="submit"]').disabled = false;
+                contactForm.querySelector('button[type="submit"]').textContent = 'Submit inquiry';
+            }, 900);
+        });
+
+        function showFormMessage(message, isSuccess) {
+            formMessage.textContent = message;
+            formMessage.classList.remove('hidden');
+            formMessage.classList.toggle('text-emerald-400', isSuccess);
+            formMessage.classList.toggle('text-rose-400', !isSuccess);
+        }
+
+        // Earnings & profit calculator logic
+        const baseCostInput = document.getElementById('baseCost');
+        const sellPriceInput = document.getElementById('sellPrice');
+        const platformPercentInput = document.getElementById('platformPercent');
+        const ordersPerMonthInput = document.getElementById('ordersPerMonth');
+        const ordersPerMonthValue = document.getElementById('ordersPerMonthValue');
+
+        const userProfitPerOrderEl = document.getElementById('userProfitPerOrder');
+        const platformProfitPerOrderEl = document.getElementById('platformProfitPerOrder');
+        const userMonthlyProfitEl = document.getElementById('userMonthlyProfit');
+        const platformMonthlyProfitEl = document.getElementById('platformMonthlyProfit');
+
+        function formatCurrency(value) {
+            const number = isNaN(value) ? 0 : value;
+            return '₹' + number.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        }
+
+        function updateEarnings() {
+            const baseCost = parseFloat(baseCostInput.value) || 0;
+            const sellPrice = parseFloat(sellPriceInput.value) || 0;
+            // Student ka profit hamesha 80% rahega
+            const studentPercent = 80;
+            const ordersPerMonth = parseInt(ordersPerMonthInput.value, 10) || 0;
+
+            // Profit before share
+            const grossProfitPerOrder = Math.max(sellPrice - baseCost, 0);
+
+            // Student and platform share based on fixed percent of gross profit
+            const userProfitPerOrder = (grossProfitPerOrder * studentPercent) / 100; // 80% student
+            const platformProfitPerOrder = grossProfitPerOrder - userProfitPerOrder; // 20% platform
+
+            const userMonthlyProfit = userProfitPerOrder * ordersPerMonth;
+            const platformMonthlyProfit = platformProfitPerOrder * ordersPerMonth;
+
+            userProfitPerOrderEl.textContent = formatCurrency(userProfitPerOrder);
+            platformProfitPerOrderEl.textContent = formatCurrency(platformProfitPerOrder);
+            userMonthlyProfitEl.textContent = formatCurrency(userMonthlyProfit);
+            platformMonthlyProfitEl.textContent = formatCurrency(platformMonthlyProfit);
+
+            ordersPerMonthValue.textContent = ordersPerMonth;
+        }
+
+        [baseCostInput, sellPriceInput, platformPercentInput, ordersPerMonthInput].forEach((input) => {
+            if (!input) return;
+            input.addEventListener('input', updateEarnings);
+            input.addEventListener('change', updateEarnings);
+        });
+
+        if (ordersPerMonthInput && ordersPerMonthValue) {
+            ordersPerMonthValue.textContent = ordersPerMonthInput.value;
+        }
+
+        // Initialize calculator on load
+        if (baseCostInput && sellPriceInput && platformPercentInput && ordersPerMonthInput) {
+            updateEarnings();
+        }
+
+        // Demo wallet: deposit, withdraw, live profit, recent withdrawals
+        const walletBalanceEl = document.getElementById('walletBalance');
+        const depositAmountInput = document.getElementById('depositAmount');
+        const withdrawAmountInput = document.getElementById('withdrawAmount');
+        const depositBtn = document.getElementById('depositBtn');
+        const withdrawBtn = document.getElementById('withdrawBtn');
+        const totalWithdrawnEl = document.getElementById('totalWithdrawn');
+        const platformLiveProfitEl = document.getElementById('platformLiveProfit');
+        const withdrawListEl = document.getElementById('withdrawList');
+
+        let walletBalance = 0;
+        let totalWithdrawn = 0;
+        let platformLiveProfit = 0;
+
+        function updateWalletUI() {
+            if (walletBalanceEl) walletBalanceEl.textContent = formatCurrency(walletBalance);
+            if (totalWithdrawnEl) totalWithdrawnEl.textContent = formatCurrency(totalWithdrawn);
+            if (platformLiveProfitEl) platformLiveProfitEl.textContent = '₹' + platformLiveProfit.toFixed(1);
+        }
+
+        function addWithdrawItem(name, amount) {
+            if (!withdrawListEl) return;
+            const li = document.createElement('li');
+            li.className = 'flex items-center justify-between px-3 py-2';
+            const left = document.createElement('div');
+            left.className = 'flex flex-col';
+            const nameEl = document.createElement('span');
+            nameEl.className = 'text-[11px] font-medium text-slate-100';
+            nameEl.textContent = name;
+            const timeEl = document.createElement('span');
+            timeEl.className = 'text-[10px] text-slate-500';
+            const now = new Date();
+            timeEl.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            left.appendChild(nameEl);
+            left.appendChild(timeEl);
+
+            const amountEl = document.createElement('span');
+            amountEl.className = 'text-[11px] font-semibold text-emerald-300';
+            amountEl.textContent = '- ' + formatCurrency(amount);
+
+            li.appendChild(left);
+            li.appendChild(amountEl);
+            withdrawListEl.insertBefore(li, withdrawListEl.firstChild);
+        }
+
+        const demoNames = ['Rahul (18)', 'Ayesha (17)', 'Karan (19)', 'Simran (20)', 'Ali (16)', 'Neha (18)'];
+
+        function randomAmount() {
+            const base = Math.floor(Math.random() * 900) + 100; // 100 - 1000
+            return base;
+        }
+
+        function seedWithdrawList() {
+            if (!withdrawListEl) return;
+            for (let i = 0; i < 8; i++) {
+                const name = demoNames[Math.floor(Math.random() * demoNames.length)];
+                const amt = randomAmount();
+                addWithdrawItem(name, amt);
+            }
+            autoScrollWithdraws();
+        }
+
+        function autoScrollWithdraws() {
+            if (!withdrawListEl) return;
+            const container = withdrawListEl.parentElement;
+            if (!container) return;
+            let scrollPos = 0;
+            setInterval(() => {
+                scrollPos += 0.5;
+                if (scrollPos >= container.scrollHeight) {
+                    scrollPos = 0;
+                }
+                container.scrollTop = scrollPos;
+            }, 50);
+        }
+
+        if (depositBtn && depositAmountInput) {
+            depositBtn.addEventListener('click', () => {
+                const amount = parseFloat(depositAmountInput.value) || 0;
+                if (amount <= 0) return;
+                walletBalance += amount;
+                updateWalletUI();
+            });
+        }
+
+        if (withdrawBtn && withdrawAmountInput) {
+            withdrawBtn.addEventListener('click', () => {
+                const amount = parseFloat(withdrawAmountInput.value) || 0;
+                if (amount <= 0) return;
+                const finalAmount = Math.min(amount, walletBalance);
+                if (finalAmount <= 0) return;
+                walletBalance -= finalAmount;
+                totalWithdrawn += finalAmount;
+                const name = demoNames[Math.floor(Math.random() * demoNames.length)];
+                addWithdrawItem(name, finalAmount);
+                updateWalletUI();
+            });
+        }
+
+        // Platform live profit auto +0.5 every 1 minute (demo)
+        setInterval(() => {
+            platformLiveProfit += 0.5;
+            updateWalletUI();
+        }, 60000);
+
+        // Initialize wallet UI and dummy withdrawals
+        updateWalletUI();
+        seedWithdrawList();
+
+        // Login/Register modal logic
+        const loginNav = document.getElementById('loginNav');
+        const loginModal = document.getElementById('loginModal');
+        const loginModalClose = document.getElementById('loginModalClose');
+        const loginModalOk = document.getElementById('loginModalOk');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+
+        function openLoginModal() {
+            if (!loginModal) return;
+            loginModal.classList.remove('hidden');
+            loginModal.classList.add('flex');
+        }
+
+        function closeLoginModal() {
+            if (!loginModal) return;
+            loginModal.classList.add('hidden');
+            loginModal.classList.remove('flex');
+        }
+
+        if (loginNav) {
+            loginNav.addEventListener('click', () => {
+                // Normal anchor scrolls to #auth, no modal here
+            });
+        }
+
+        // Block real auth and show full message instead
+        if (loginForm) {
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                openLoginModal();
+            });
+        }
+
+        if (registerForm) {
+            registerForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                openLoginModal();
+            });
+        }
+
+        if (loginModalClose) {
+            loginModalClose.addEventListener('click', () => {
+                closeLoginModal();
+            });
+        }
+
+        if (loginModalOk) {
+            loginModalOk.addEventListener('click', () => {
+                closeLoginModal();
+            });
+        }
+
+        // Close modal on background click
+        if (loginModal) {
+            loginModal.addEventListener('click', (e) => {
+                if (e.target === loginModal) {
+                    closeLoginModal();
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
